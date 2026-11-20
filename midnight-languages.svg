@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 268" width="900" height="268" role="img">
+<title>Primary languages across public repositories</title>
+<rect x=".5" y=".5" width="899" height="267" rx="17" fill="#190F1D" stroke="#C47A91"/>
+<g font-family="monospace" fill="#F5EAF0">
+<text x="35" y="46" font-size="24">Public repository languages</text>
+<text x="35" y="71" font-size="14" fill="#B9B4C5">Primary language per repository · excludes forks and this profile</text>
+<text x="35" y="115" font-size="16">HTML</text>
+<rect x="205" y="103" width="470" height="12" rx="6" fill="#C47A91"/>
+<text x="700" y="115" font-size="15">2</text>
+<text x="35" y="144" font-size="16">Python</text>
+<rect x="205" y="132" width="470" height="12" rx="6" fill="#C47A91"/>
+<text x="700" y="144" font-size="15">2</text>
+<text x="35" y="173" font-size="16">TypeScript</text>
+<rect x="205" y="161" width="235" height="12" rx="6" fill="#C47A91"/>
+<text x="700" y="173" font-size="15">1</text>
+</g></svg>
