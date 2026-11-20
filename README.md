@@ -47,5 +47,3 @@ I used sentiment analysis to explore how patterns in public social media posts m
 ## A little about me
 
 I’m interested in how software gets from a rough idea to something people can try, and I’m open to internships and entry-level roles in software, data, and product.
-
-Away from my laptop, I like travelling solo. I’ve explored India, Nepal, and Sri Lanka on my own.
