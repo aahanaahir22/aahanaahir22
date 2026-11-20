@@ -1,0 +1,90 @@
+name: Generate profile contribution snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/profile-snake.yml']
+
+permissions: {}
+
+concurrency:
+  group: profile-contribution-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Render public contribution calendar
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: aahanaahir22
+          outputs: |
+            midnight-snake-dark.svg?palette=github-dark&color_snake=%23B9B4C5&color_dots=%23241A26,%2342233F,%23651D32,%239E526E,%23C47A91
+            midnight-snake-light.svg?palette=github-light&color_snake=%23651D32&color_dots=%23F5EAF0,%23DFACBC,%23C47A91,%239E526E,%23651D32
+      - name: Render public repository language summary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --paginate --slurp 'users/aahanaahir22/repos?type=owner&per_page=100' > "$RUNNER_TEMP/profile-repos.json"
+          python3 - "$RUNNER_TEMP/profile-repos.json" <<'PYTHON'
+          import json
+          import sys
+          from collections import Counter
+          from html import escape
+          from pathlib import Path
+
+          pages = json.loads(Path(sys.argv[1]).read_text())
+          repos = [repo for page in pages for repo in page if not repo['private'] and not repo['fork']]
+          languages = Counter(
+              repo['language']
+              for repo in repos
+              if repo['language'] and repo['name'].lower() != 'aahanaahir22'
+          )
+          rows = languages.most_common(5)
+          lines = [
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 268" width="900" height="268" role="img">',
+              '<title>Primary languages across public repositories</title>',
+              '<rect x=".5" y=".5" width="899" height="267" rx="17" fill="#190F1D" stroke="#C47A91"/>',
+              '<g font-family="monospace" fill="#F5EAF0">',
+              '<text x="35" y="46" font-size="24">Public repository languages</text>',
+              '<text x="35" y="71" font-size="14" fill="#B9B4C5">Primary language per repository · excludes forks and this profile</text>',
+          ]
+          for index, (name, count) in enumerate(rows):
+              y = 103 + 29 * index
+              width = round(470 * count / rows[0][1])
+              lines.extend([
+                  f'<text x="35" y="{y + 12}" font-size="16">{escape(name)}</text>',
+                  f'<rect x="205" y="{y}" width="{width}" height="12" rx="6" fill="#C47A91"/>',
+                  f'<text x="700" y="{y + 12}" font-size="15">{count}</text>',
+              ])
+          if not rows:
+              lines.append('<text x="35" y="121" font-size="16">No primary languages reported.</text>')
+          lines.append('</g></svg>')
+          Path('midnight-languages.svg').write_text('\n'.join(lines) + '\n')
+          PYTHON
+      - name: Commit refreshed images
+        shell: bash
+        run: |
+          set -euo pipefail
+          for asset in midnight-snake-{dark,light}.svg midnight-languages.svg; do
+            test -s "$asset"
+            head -c 512 "$asset" | grep -q '<svg'
+          done
+          git add -- midnight-snake-dark.svg midnight-snake-light.svg midnight-languages.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh profile activity visuals'
+          git pull --rebase origin main
+          git push origin HEAD:main
