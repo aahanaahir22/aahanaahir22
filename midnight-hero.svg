@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" role="img" aria-labelledby="title">
+  <title id="title">Aahana Ahir — software, data and AI</title>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#0B0B12"/><stop offset=".56" stop-color="#211321"/><stop offset="1" stop-color="#42233F"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#C47A91" stop-opacity=".27"/><stop offset="1" stop-color="#651D32" stop-opacity="0"/></radialGradient>
+    <linearGradient id="trace"><stop stop-color="#42233F"/><stop offset="1" stop-color="#C47A91"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0v28" fill="none" stroke="#B9B4C5" opacity=".11"/></pattern>
+    <clipPath id="frame"><rect width="900" height="340" rx="22"/></clipPath>
+    <clipPath id="typing"><rect class="reveal" width="585" height="40" x="51" y="195"/></clipPath>
+  </defs>
+  <style>
+    .trace { stroke-dasharray: 22 260; animation: signal 12s linear infinite; }
+    .pulse { animation: pulse 7s ease-in-out infinite; }
+    .monogram { stroke-dasharray: 550; animation: draw 1.7s ease-out both; }
+    .intro { animation: enter .8s ease-out both; }
+    .phrase-two,.phrase-three {opacity:0}
+    .phrase-one {animation: first 18s linear infinite}
+    .phrase-two {animation: second 18s linear infinite}
+    .phrase-three {animation: third 18s linear infinite}
+    .reveal { animation: typing 6s steps(32,end) infinite; }
+    @keyframes signal { to {stroke-dashoffset:-564} }
+    @keyframes pulse { 50% {opacity:.3} }
+    @keyframes draw { from {stroke-dashoffset:550} to {stroke-dashoffset:0} }
+    @keyframes enter {from {opacity:.45;transform:translateY(7px)} to {opacity:1;transform:translateY(0)} }
+    @keyframes first {0%,33.32%{opacity:1}33.33%,100%{opacity:0}}
+    @keyframes second {0%,33.32%,66.66%,100%{opacity:0}33.33%,66.65%{opacity:1}}
+    @keyframes third {0%,66.66%{opacity:0}66.67%,100%{opacity:1}}
+    @keyframes typing {0% {width:0} 35%,100% {width:585px} }
+    @media (prefers-reduced-motion:reduce) { * {animation:none!important} }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="900" height="340" fill="url(#bg)"/>
+    <rect x="492" width="410" height="340" fill="url(#grid)"/>
+    <ellipse cx="746" cy="166" rx="220" ry="185" fill="url(#halo)"/>
+    <path d="M41 38h818M41 299h818" stroke="#C47A91" opacity=".32"/>
+    <path d="M565 82h79l35 35h154m-278 128h67l37-36h180m-207-62h-39l-45-42" stroke="#B9B4C5" opacity=".23" fill="none"/>
+    <path class="trace" d="M565 82h79l35 35h154m-278 128h67l37-36h180" stroke="url(#trace)" stroke-width="2" fill="none"/>
+    <circle cx="743" cy="164" r="90" fill="#1B111D" fill-opacity=".56" stroke="#C47A91" stroke-opacity=".42"/>
+    <circle cx="743" cy="164" r="75" fill="none" stroke="#B9B4C5" stroke-opacity=".24" stroke-dasharray="2 7"/>
+    <g class="pulse" fill="#C47A91"><circle cx="833" cy="117" r="4"/><circle cx="839" cy="209" r="3"/><circle cx="661" cy="239" r="3"/></g>
+    <path class="monogram" d="M688 195q24-60 48-67 13-5 5 14l-17 47m-30-20 43-8m-11 29q32-65 45-65 11 0 2 20l-18 48m-12-28 38-7m-23 36 37-12" stroke="#F5EAF0" opacity=".9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <g class="intro">
+      <text x="51" y="95" font-family="monospace" font-size="15" letter-spacing="4" fill="#C47A91">SOFTWARE / DATA / AI</text>
+      <text x="48" y="171" font-family="Georgia,serif" font-size="71" letter-spacing="1" fill="#F5EAF0">AAHANA AHIR</text>
+      <g clip-path="url(#typing)" font-family="monospace" font-size="19" fill="#F5EAF0">
+        <text class="phrase-one" x="51" y="220">Building tools for everyday workflows.</text>
+        <text class="phrase-two" x="51" y="220">Exploring AI, data and product engineering.</text>
+        <text class="phrase-three" x="51" y="220">Making complicated workflows simpler.</text>
+      </g>
+    </g>
+    <circle class="pulse" cx="56" cy="266" r="4" fill="#C47A91"/>
+    <text x="69" y="271" font-family="monospace" font-size="14" letter-spacing="1.6" fill="#B9B4C5">FINAL-YEAR B.TECH STUDENT</text>
+  </g>
+  <rect x=".5" y=".5" width="899" height="339" rx="22" fill="none" stroke="#C47A91" stroke-opacity=".62"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 61" width="900" height="61">
+  <defs><linearGradient id="b"><stop stop-color="#0B0B12"/><stop offset=".5" stop-color="#42233F"/><stop offset="1" stop-color="#0B0B12"/></linearGradient></defs>
+  <style>.path{stroke-dasharray:13 48;animation:shift 12s linear infinite}@keyframes shift{to{stroke-dashoffset:-244}}@media(prefers-reduced-motion:reduce){.path{animation:none}}</style>
+  <rect width="900" height="61" rx="14" fill="url(#b)"/>
+  <path d="M32 30h361l25 12h64l25-12h361" fill="none" stroke="#C47A91" opacity=".55"/>
+  <path class="path" d="M32 30h361l25 12h64l25-12h361" fill="none" stroke="#F5EAF0" opacity=".65"/>
+  <path d="M450 12l6 6-6 6-6-6z" fill="#C47A91"/>
+</svg>

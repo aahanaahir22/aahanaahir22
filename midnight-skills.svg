@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-labelledby="title">
+  <title id="title">Languages, frontend, backend, AI and data</title>
+  <defs><linearGradient id="p"><stop stop-color="#0B0B12"/><stop offset="1" stop-color="#42233F"/></linearGradient></defs>
+  <style>
+    .signal{animation:flow 11s linear infinite;stroke-dasharray:9 36}
+    @keyframes flow{to{stroke-dashoffset:-180}}
+    @media(prefers-reduced-motion:reduce){.signal{animation:none}}
+  </style>
+  <rect x=".5" y=".5" width="899" height="229" rx="17" fill="url(#p)" stroke="#C47A91" stroke-opacity=".65"/>
+  <path d="M112 96H787M112 104v31m224-31v31m225-31v31m226-31v31" stroke="#C47A91" fill="none" opacity=".42"/>
+  <path class="signal" d="M112 96H787" stroke="#F5EAF0" stroke-width="2" fill="none" opacity=".83"/>
+  <g fill="#221625" stroke="#C47A91" stroke-width="1.5">
+    <rect x="88" y="49" width="48" height="48" rx="12"/><rect x="312" y="49" width="48" height="48" rx="12"/>
+    <rect x="537" y="49" width="48" height="48" rx="12"/><rect x="763" y="49" width="48" height="48" rx="12"/>
+  </g>
+  <g text-anchor="middle" font-family="monospace" fill="#F5EAF0">
+    <g font-size="21" fill="#F5EAF0"><text x="112" y="80">&lt;/&gt;</text><text x="336" y="80">UI</text><text x="561" y="80">API</text><text x="787" y="80">AI</text></g>
+    <g font-size="18" font-weight="bold"><text x="112" y="157">LANGUAGES</text><text x="336" y="157">FRONTEND</text><text x="561" y="157">BACKEND</text><text x="787" y="157">AI + DATA</text></g>
+    <g font-size="14" fill="#B9B4C5"><text x="112" y="185">Python · SQL · TypeScript</text><text x="336" y="185">React</text><text x="561" y="185">FastAPI · Flask · PostgreSQL</text><text x="787" y="185">NLP · FAISS</text></g>
+  </g>
+</svg>
