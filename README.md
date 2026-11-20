@@ -1,20 +1,37 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0%3A261638%2C50%3A65365C%2C100%3AB95F74&amp;height=110&amp;section=header" width="100%" alt="" />
+  <img src="./midnight-hero.svg" width="100%" alt="Aahana Ahir, final-year B.Tech student exploring software, data and AI" />
 </p>
 
-<h1 align="center">Hey, I’m Aahana Ahir 👋</h1>
+<h1 align="center">Aahana Ahir</h1>
 
 <p align="center">
-  <strong>I like figuring out where a workflow gets messy, then building something that makes it easier.</strong>
+  <strong>Final-year B.Tech student · Software, data, AI and product</strong>
 </p>
+
+I like figuring out where a workflow gets messy, then building something that makes it easier.
+
+```yaml
+interests: [software, data, applied AI, product engineering]
+tools: [Python, SQL, TypeScript, React, FastAPI, Flask]
+open_to: [internships, entry-level roles, project collaboration]
+```
+
+## Tools in use
 
 <p align="center">
-  Final-year B.Tech student · Python · SQL · Product and data projects
+  <img src="./midnight-skills.svg" width="100%" alt="Languages: Python, SQL and TypeScript. Frontend: React. Backend: FastAPI, Flask and PostgreSQL. AI and data: NLP and FAISS." />
 </p>
 
----
+| Area | Where I’ve used it |
+| --- | --- |
+| **Python and NLP** | Data analysis and sentiment-analysis experiments. |
+| **SQL** | Querying and working with structured data. |
+| **TypeScript and React** | The interactive incident-investigation interface in [OpsAssist AI](https://github.com/aahanaahir22/opsassist-ai). |
+| **FastAPI and PostgreSQL** | The API and persistence stack documented in [OpsAssist AI](https://github.com/aahanaahir22/opsassist-ai). |
+| **Flask** | The backend for a mini app. |
+| **FAISS** | The semantic retrieval index documented in [OpsAssist AI](https://github.com/aahanaahir22/opsassist-ai). |
 
-## What I’ve been building
+## Selected projects
 
 ### OpsAssist AI
 
@@ -36,14 +53,27 @@ I used sentiment analysis to explore how patterns in public social media posts m
 
 </details>
 
-## What I work with
+## Current focus
 
-| Tool | Where I use it |
-| --- | --- |
-| **Python** | Data analysis and NLP experiments |
-| **SQL** | Querying and working with structured data |
-| **Flask** | Building the backend for a mini app |
+- **Building** · Prototypes that make operational and data-heavy tasks easier to navigate.
+- **Exploring** · How evidence-backed AI and product design can make complex workflows easier to follow.
+- **Open to** · Internships, entry-level roles and project collaborations in software, data, AI and product.
 
-## A little about me
+## GitHub activity
 
-I’m interested in how software gets from a rough idea to something people can try, and I’m open to internships and entry-level roles in software, data, and product.
+[Contribution history](https://github.com/aahanaahir22#js-contribution-activity-description) · [Public repositories](https://github.com/aahanaahir22?tab=repositories) · [Achievements](https://github.com/aahanaahir22?tab=achievements)
+
+<img src="./midnight-languages.svg" width="100%" alt="Chart of primary languages across Aahana’s public, non-fork repositories" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./midnight-snake-dark.svg" />
+  <img src="./midnight-snake-light.svg" width="100%" alt="Animated snake tracing Aahana’s GitHub contribution calendar" />
+</picture>
+
+## Connect
+
+[<kbd>GitHub</kbd>](https://github.com/aahanaahir22) · [<kbd>Portfolio</kbd>](https://aahanaahir22.github.io/) · [<kbd>LinkedIn</kbd>](https://www.linkedin.com/in/aahanaahir02/)
+
+I like building tools that make the next step easier to see.
+
+<img src="./midnight-footer.svg" width="100%" alt="" />
